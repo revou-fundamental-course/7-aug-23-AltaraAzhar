@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>KALKULATOR SEGITIGA | ALTARA </title>
+</head>
+<body>
+    <header>
+        <h1>Kalkulator Luas dan Keliling segitiga</h1>
+    </header>
+    <div class="container">
+        <img src="https://ilmuplus.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/03/segitiga.jpg.webp" width="350" height="350">
+     </div>
+     <label for="">Alas Segitiga</label><br>
+     <input type="number" id="alas"><br>
+     <label for="">Tinggi Segitiga</label><br>
+     <input type="number" id="tinggi"><br>
+     <button id="hitung">Hitung</button>
+     <div id="output"></div>
+     <script>
+        const alas = document.getElementById('alas')
+        const tinggi = document.getElementById('tinggi')
+        const hitung = document.getElementById('hitung') 
+        const output = document.getElementById('output') 
+        hitung.addEventListener('click', function(){
+         let a = alas.value
+         let t = tinggi.value
+         let l = 0.5*a*t
+         output.innerHTML = `Luas Segitiga dari alas ${a} dan tinggi ${t} adalah ${l} cm2`
+})
+     </script>
+</body>
+</html>
+
+  <script>
+    function hitungKeliling() {
+      var sisiA = parseFloat(document.getElementById("sisiA").value);
+      var sisiB = parseFloat(document.getElementById("sisiB").value);
+      var sisiC = parseFloat(document.getElementById("sisiC").value);
+      
+      if (isNaN(sisiA) || isNaN(sisiB) || isNaN(sisiC)) {
+        document.getElementById("hasil").innerHTML = "Masukkan panjang sisi dengan benar.";
+      } else {
+        var keliling = sisiA + sisiB + sisiC;
+        document.getElementById("hasil").innerHTML = "Keliling segitiga adalah: " + keliling.toFixed(2);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Keliling Segitiga</h1>
+</header>
+<div class="city">
+ <label for="sisiA">Sisi A: </label>
+  <input type="number" id="sisiA"><br><br>
+  
+  <label for="sisiB">Sisi B: </label>
+  <input type="number" id="sisiB"><br><br>
+  
+  <label for="sisiC">Sisi C: </label>
+  <input type="number" id="sisiC"><br><br>
+  
+  <button onclick="hitungKeliling()">Hitung Keliling</button>
+  
+  <p id="hasil"></p>
+</body>
+</html>
